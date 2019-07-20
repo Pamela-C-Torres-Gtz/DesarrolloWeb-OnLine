@@ -1,0 +1,19 @@
+/*reglas    ejemplo:header {
+                    background-color:pink;
+         }
+selectores  ejemplo: header
+declariones  ejemplo: {
+                     background-color:pink;
+                    }
+propiedades   ejemplo: background-color
+valores    ejemplo: :pink;  */
+
+header {
+    background-color:pink;
+}
+
+/*selector de etiqueta  ejemplo  header-section-article-nav*/
+/* selector descenten*/
+/*body header div nav ol li a */
+/* selector de clase se realiza con . ejemplo  .link*/
+/*selector de id se puede hacer con un #*/

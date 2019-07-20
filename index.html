@@ -6,65 +6,68 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Leonidas Esteban</title>
     <link rel = "icon" type = "image/png" href = "images/favicon.png"/> <!--Para colocar imagen de icono en la pestaña del navegador esto aparece del lado derecho del titulo-->
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <heder>
+    <header class="header">
         <div>
-        <figure>
+        <figure class="logo">
             <img src="images/logo.png" alt="Logo de http://leonidasesteban.com"/>
         </figure>
-      <nav>
+      <nav class="menu">
           <ol>
               <li>
-                <a href="./portafolio/">Portafolio</a><!--Todo lo tiene a es una ancla de enlace-->
+                <a class="link" href="./portafolio/">Portafolio</a><!--Todo lo tiene a es una ancla de enlace-->
               </li>
               <li>
-                <a href ="#events">Experiencia</a>
+                <a class="link" href ="#events">Experiencia</a>
               </li>
               <li>
-                <a href ="#contacto">Trabajemos juntos</a>
+                <a class="link" href ="#contacto">Trabajemos juntos</a>
               </li>
           </ol>
         </div>
       </nav>
-    </heder>
-    <section>
+    </header>
+    <section class="hero">
         <h1>Hola! Soy <strong>Leonidas Esteban</strong>  Desrrollador <br> <strong>Javascript con </strong><br> pasión por la <strong>enseñansa</strong> </h1>
         <img src = "images/hero.jpg" width="500" height="300" alt="imagen principal del sitio"><!--Esta imagen siempre debe ser muy grande y se pude redimiencionar con ancho y alto-->
     </section>
-    <section id="portfolio">
+    <section id="portafolio" class="portfolio">
         <h2>Portafolio (Proyectos Destacados)</h2>
-        <article><!--hace referencia auno de los proyectos-->
-          <h3>Platzi Video</h3>
-          <h6>React Natibe / Reactive</h6>
-          <p><small><strong>Fecha:</strong> 9/07/1</small></p><!--para poner texto un poco más pequeño-->
-          <p><small><strong>Puedes Verlo en: </strong>www.platzi.com/native </small></p></p>
-          <p>Platzi Video fue el resultado de 3 meses de trabajo
+        <article class="proyect"><!--hace referencia auno de los proyectos-->
+          <h3 class="proyect-title">Platzi Video</h3>
+          <h6 class="proyect-course">React Natibe / Reactive</h6>
+          <p class="proyect-date"><small><strong>Fecha:</strong> 9/07/1</small></p><!--para poner texto un poco más pequeño-->
+          <p class="proyect-url"><small><strong>Puedes Verlo en: </strong>www.platzi.com/native </small></p></p>
+          <p class="poyect-description">Platzi Video fue el resultado de 3 meses de trabajo
              para crear la mejor app para enseñar el funcionamiento
              de React y React Native. Desde crear un vista-detalle, hasta patrones avanzados de navegación, este proyecto ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma.</p>
-          <img width="500" src="images/platzi-video-react-native.png" alt="proyecto del curso de REac Native">
+          <figure class="proyect-imageContainer">
+             <img class="proyect-image" width="500" src="images/platzi-video-react-native.png" alt="proyecto del curso de REac Native">
+          </figure>
         </article>
     </section>
     <section id="events">
         <h2>Más sobre mi experiencia</h2>
-        <article> <!--Ejemplo de como funcionaria un evento dentro de los eventos-->
-           <figure>
-               <img src="images/platzi-conf.jpg" width="500">
+        <article class="event"> <!--Ejemplo de como funcionaria un evento dentro de los eventos-->
+           <figure class="event-imageContainer">
+               <img class="event-image" src="images/platzi-conf.jpg" width="500">
            </figure>
-           <h3>PlatziConf México 2018</h3>
-           <p>El evento más grnade sobre gente que quiere aprender más de internet.</p>
-           <a href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="blanck">Ver platica</a><!--El atributo target="blanck" nos sirve para que nuestro enlace se abra en una pagina nueva-->
+           <h3 class="event-title">PlatziConf México 2018</h3>
+           <p class="event-description" >El evento más grnade sobre gente que quiere aprender más de internet.</p>
+           <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="blanck">Ver platica</a><!--El atributo target="blanck" nos sirve para que nuestro enlace se abra en una pagina nueva-->
         </article>
     </section>
-    <section id="contacto">
-      <form action="/suscripción/"> <!--el dorm es para suscribir y se puede usar con js o enviarlo dentro de nuestro sitio web-->
+    <section id="contacto" class="contact">
+      <form action="/suscripción/" class="form-email"> <!--el dorm es para suscribir y se puede usar con js o enviarlo dentro de nuestro sitio web-->
         <!--<label for="email">Dejame tu emal</label>--><!--con el atributo for podemos hacer enlaces a otras partes de nuestra pagina-->
-        <h3>¿Creamos algo juntos?</h3>
-        <input type="texto" placeholder="Dejame tu email" id="email"><!--Esto se utiliza para hacer un cuadro y el placeholder nos sirve par poner texto dentro del input-->
+        <h3 class="contact-title">¿Creamos algo juntos?</h3>
+        <input class="contact-email" type="texto" placeholder="Dejame tu email" id="email"><!--Esto se utiliza para hacer un cuadro y el placeholder nos sirve par poner texto dentro del input-->
         <!--<input type="sbmit" value="texto del boton">--><!--Esto nos sirve para enviar información con los atributos submite-->
-        <button>Enviar</button>
+        <button class="contact-btn">Enviar</button>
       </form>
     </section>
-    <footer>footer</footer>
+    <footer class="footer">footer</footer>
 </body>
 </html>
