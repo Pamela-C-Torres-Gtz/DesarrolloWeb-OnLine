@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Leonidas Esteban</title>
     <link rel = "icon" type = "image/png" href = "images/favicon.png"/> <!--Para colocar imagen de icono en la pestaña del navegador esto aparece del lado derecho del titulo-->
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -30,26 +31,28 @@
       </nav>
     </header>
     <section class="hero">
-        <h1>Hola! Soy <strong>Leonidas Esteban</strong>  Desrrollador <br> <strong>Javascript con </strong><br> pasión por la <strong>enseñansa</strong> </h1>
-        <img src = "images/hero.jpg" width="500" height="300" alt="imagen principal del sitio"><!--Esta imagen siempre debe ser muy grande y se pude redimiencionar con ancho y alto-->
+        <h1>Hola! Soy <strong>Leonidas Esteban</strong> <br> Desrrollador<strong>Javascript</strong> con <br> pasión por la <strong>enseñanza</strong> </h1>
+        <!--<img src = "images/hero.jpg" width="500" height="300" alt="imagen principal del sitio"><!--Esta imagen siempre debe ser muy grande y se pude redimiencionar con ancho y alto-->
     </section>
     <section id="portafolio" class="portfolio">
         <h2>Portafolio (Proyectos Destacados)</h2>
-        <article class="proyect"><!--hace referencia auno de los proyectos-->
-          <h3 class="proyect-title">Platzi Video</h3>
-          <h6 class="proyect-course">React Natibe / Reactive</h6>
-          <p class="proyect-date"><small><strong>Fecha:</strong> 9/07/1</small></p><!--para poner texto un poco más pequeño-->
-          <p class="proyect-url"><small><strong>Puedes Verlo en: </strong>www.platzi.com/native </small></p></p>
-          <p class="poyect-description">Platzi Video fue el resultado de 3 meses de trabajo
+        <article class="project"><!--hace referencia auno de los proyectos-->
+          <div class="project-details"><!--destalles del proyecto-->
+            <h3 class="project-title">Platzi Video</h3>
+            <h6 class="project-course">React Natibe / Reactive</h6>
+            <p class="project-date"><small><strong>Fecha:</strong> 9/07/1</small></p><!--para poner texto un poco más pequeño-->
+            <p class="project-url"><small><strong>Puedes Verlo en: </strong>www.platzi.com/native </small></p></p>
+            <p class="poject-description">Platzi Video fue el resultado de 3 meses de trabajo
              para crear la mejor app para enseñar el funcionamiento
              de React y React Native. Desde crear un vista-detalle, hasta patrones avanzados de navegación, este proyecto ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma.</p>
-          <figure class="proyect-imageContainer">
-             <img class="proyect-image" width="500" src="images/platzi-video-react-native.png" alt="proyecto del curso de REac Native">
+          </div>
+          <figure class="project-imageContainer">
+             <img class="project-image" width="500" src="images/platzi-video-react-native.png" alt="proyecto del curso de REac Native">
           </figure>
         </article>
     </section>
-    <section id="events">
-        <h2>Más sobre mi experiencia</h2>
+    <section id="events" class="experience">
+        <h2 class="experience-title">Más sobre mi experiencia</h2>
         <article class="event"> <!--Ejemplo de como funcionaria un evento dentro de los eventos-->
            <figure class="event-imageContainer">
                <img class="event-image" src="images/platzi-conf.jpg" width="500">

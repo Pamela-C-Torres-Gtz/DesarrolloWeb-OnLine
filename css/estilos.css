@@ -8,12 +8,81 @@ declariones  ejemplo: {
 propiedades   ejemplo: background-color
 valores    ejemplo: :pink;  */
 
-header {
+/*header {
     background-color:pink;
-}
+}*/
 
 /*selector de etiqueta  ejemplo  header-section-article-nav*/
 /* selector descenten*/
 /*body header div nav ol li a */
 /* selector de clase se realiza con . ejemplo  .link*/
 /*selector de id se puede hacer con un #*/
+
+/*gris oscuro= #1d252c*/
+/* gris claro =#626262*/
+/* background gris obscuro = #1b2127*/
+/* celeste= #026fff*/
+
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*h1 {
+    font-family: 'Open Sans', 'Times New Roman', Times, serif;/* cuando una fuente tiene más de dos palabras se deben de poner entre comillas
+}*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Fjalla One', sans-serif; /*tipos de fuente para todos los h1*/
+    font-weight: normal;
+    /*font-style: italic;*/ /*para poner el tipo de letra que queramos y que no colocamos en nuestro google font*/
+}
+
+h1 {
+  font-size: 40px;  /*tamaño de la fuente*/
+  line-height: 1.5; /*espacio entre lineas de los textos*/
+  letter-spacing: -.2px;/*separacion que deben tener las letras*/
+   color: white; /* poner color a la letra del titulo*/
+  /* text-transform: uppercase;/*transformar las fuentes a mayusculas*/
+  /*text-decoration: dashed; /*decorar el texto diferente al estilo por defecto*/
+}
+
+/*aplicamos selector descente de h1 strong*/
+h1 strong{
+    color: #026fff;
+}
+
+.hero{
+    height: 300px; /*ponerle alto ficjo a un elemento*/  
+    background-image: url('../images/hero.jpg'); /*colocar estilios descentes ose nuestra imagen de fondo*/
+    background-color: #1b2127; /*poner color de fondo utiliamos colores estandar*/
+    background-size: 500px 300px;/*para darle altura a la imagen dentro de esa sección siempre se empieza por el ancho y luego por el alto*/
+    background-repeat: no-repeat; /*para que no se repita mi igaen en la sección*/
+    background-position-x: right; /*para hubicar la imagen donde queremos en el eje orizontal*/
+
+
+}
+
+.project-details{
+  width: 500px;
+}
+
+.project-imageContainer{
+    width: 500px;
+    height: 100px;
+}
+
+.header{
+    background-color: #1b2127; /*color gris obscuro*/
+    color: white;/*para dar formato a los enlaces con el color de fondo para ponerle color a los textos.*/
+}
+
+.header a{  /*paqra colocar color a los elementos dentro de la cabecera*/
+    color: white;
+    text-decoration: none; /*que no tenga ningun tipo de decoración o subrayado el texto el menu*/
+}
