@@ -10,10 +10,15 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+   <!--<div class="felxbox">
+     <div class="box"></div>
+     <div class="box"></div>
+     <div class="box"></div>
+     
+   </div>-->
     <header class="header">
-        <div>
         <figure class="logo">
-            <img src="images/logo.png" alt="Logo de http://leonidasesteban.com"/>
+            <img src="images/logo.png" height="50px" alt="Logo de http://leonidasesteban.com"/>
         </figure>
       <nav class="menu">
           <ol>
@@ -27,15 +32,28 @@
                 <a class="link" href ="#contacto">Trabajemos juntos</a>
               </li>
           </ol>
-        </div>
       </nav>
     </header>
     <section class="hero">
         <h1>Hola! Soy <strong>Leonidas Esteban</strong> <br> Desrrollador<strong>Javascript</strong> con <br> pasión por la <strong>enseñanza</strong> </h1>
-        <!--<img src = "images/hero.jpg" width="500" height="300" alt="imagen principal del sitio"><!--Esta imagen siempre debe ser muy grande y se pude redimiencionar con ancho y alto-->
+        <!--<img src = "images/hero.jpg" width="500" height="300" alt="imagen principal del sitio">--><!--Esta imagen siempre debe ser muy grande y se pude redimiencionar con ancho y alto-->
     </section>
     <section id="portafolio" class="portfolio">
         <h2>Portafolio (Proyectos Destacados)</h2>
+        <article class="project"><!--hace referencia auno de los proyectos-->
+          <div class="project-details"><!--destalles del proyecto-->
+            <h3 class="project-title">Platzi Video</h3>
+            <h6 class="project-course">React Natibe / Reactive</h6>
+            <p class="project-date"><small><strong>Fecha:</strong> 9/07/1</small></p><!--para poner texto un poco más pequeño-->
+            <p class="project-url"><small><strong>Puedes Verlo en: </strong>www.platzi.com/native </small></p></p>
+            <p class="project-description">Platzi Video fue el resultado de 3 meses de trabajo
+             para crear la mejor app para enseñar el funcionamiento
+             de React y React Native. Desde crear un vista-detalle, hasta patrones avanzados de navegación, este proyecto ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma.</p>
+          </div>
+          <figure class="project-imageContainer">
+             <img class="project-image" width="500" src="images/platzi-video-react-native.png" alt="proyecto del curso de REac Native">
+          </figure>
+        </article>
         <article class="project"><!--hace referencia auno de los proyectos-->
           <div class="project-details"><!--destalles del proyecto-->
             <h3 class="project-title">Platzi Video</h3>
@@ -51,15 +69,47 @@
           </figure>
         </article>
     </section>
+    <h2 class="experience-title">Más sobre mi experiencia</h2>
     <section id="events" class="experience">
-        <h2 class="experience-title">Más sobre mi experiencia</h2>
         <article class="event"> <!--Ejemplo de como funcionaria un evento dentro de los eventos-->
            <figure class="event-imageContainer">
                <img class="event-image" src="images/platzi-conf.jpg" width="500">
            </figure>
-           <h3 class="event-title">PlatziConf México 2018</h3>
-           <p class="event-description" >El evento más grnade sobre gente que quiere aprender más de internet.</p>
-           <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="blanck">Ver platica</a><!--El atributo target="blanck" nos sirve para que nuestro enlace se abra en una pagina nueva-->
+           <div class="event-details">
+             <h3 class="event-title">PlatziConf México 2018</h3>
+             <p class="event-description" >El evento más grnade sobre gente que quiere aprender más de internet.</p>
+             <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="blanck">Ver platica</a><!--El atributo target="blanck" nos sirve para que nuestro enlace se abra en una pagina nueva-->
+           </div>
+        </article>
+        <article class="event"> <!--Ejemplo de como funcionaria un evento dentro de los eventos-->
+          <figure class="event-imageContainer">
+              <img class="event-image" src="images/platzi-conf.jpg" width="500">
+          </figure>
+          <div class="event-details">
+            <h3 class="event-title">PlatziConf México 2018</h3>
+            <p class="event-description" >El evento más grnade sobre gente que quiere aprender más de internet.</p>
+            <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="blanck">Ver platica</a><!--El atributo target="blanck" nos sirve para que nuestro enlace se abra en una pagina nueva-->
+          </div>
+        </article>
+        <article class="event"> <!--Ejemplo de como funcionaria un evento dentro de los eventos-->
+          <figure class="event-imageContainer">
+            <img class="event-image" src="images/platzi-conf.jpg" width="500">
+          </figure>
+          <div class="event-details">
+            <h3 class="event-title">PlatziConf México 2018</h3>
+            <p class="event-description" >El evento más grnade sobre gente que quiere aprender más de internet.</p>
+            <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="blanck">Ver platica</a><!--El atributo target="blanck" nos sirve para que nuestro enlace se abra en una pagina nueva-->
+          </div>
+         </article>
+         <article class="event"> <!--Ejemplo de como funcionaria un evento dentro de los eventos-->
+           <figure class="event-imageContainer">
+             <img class="event-image" src="images/platzi-conf.jpg" width="500">
+           </figure>
+           <div class="event-details">
+             <h3 class="event-title">PlatziConf México 2018</h3>
+             <p class="event-description" >El evento más grnade sobre gente que quiere aprender más de internet.</p>
+             <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="blanck">Ver platica</a><!--El atributo target="blanck" nos sirve para que nuestro enlace se abra en una pagina nueva-->
+           </div>
         </article>
     </section>
     <section id="contacto" class="contact">
@@ -71,6 +121,14 @@
         <button class="contact-btn">Enviar</button>
       </form>
     </section>
-    <footer class="footer">footer</footer>
+    <footer class="footer">
+      <div>
+        <p>Curso de Desarrollo Web on line 2019 <img src="images/platzi.png" width="80px" alt="platzi"></p>
+      </div>
+      <div>
+        <p>Desigd with &hearts; by <a href="https://twitter.com/thespianartist">@thespianartist</a></p>
+        <p>Maquetado with &hearts; by <a href="https://twitter.com/pamelatgtz">@pamelatgtz</a></p>
+      </div>
+    </footer>
 </body>
 </html>
