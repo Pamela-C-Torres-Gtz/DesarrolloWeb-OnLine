@@ -68,15 +68,120 @@ h2 {
   margin-bottom: 40px;
 }
 
-.hero{
-    height: 300px; /*ponerle alto ficjo a un elemento*/  
-    background-image: url('../images/hero.jpg'); /*colocar estilios descentes ose nuestra imagen de fondo*/
-    background-color: #1b2127; /*poner color de fondo utiliamos colores estandar*/
-    background-size: 500px 300px;/*para darle altura a la imagen dentro de esa sección siempre se empieza por el ancho y luego por el alto*/
-    background-repeat: no-repeat; /*para que no se repita mi igaen en la sección*/
-    background-position-x: right; /*para hubicar la imagen donde queremos en el eje orizontal*/
+.header {
+    background-color: #1b2127; /*color gris obscuro*/
+    color: white;/*para dar formato a los enlaces con el color de fondo para ponerle color a los textos.*/
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ol,
+ul {
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+
+figure {
+    margin: 0;
+}
+
+.header a {  /*paqra colocar color a los elementos dentro de la cabecera*/
+    color: white;
+    text-decoration: none; /*que no tenga ningun tipo de decoración o subrayado el texto el menu*/
+}
+
+.menu {
+    height: inherit;
+}
+
+.header ol {
+    display: flex;
+    height: inherit;
+    align-items: center;
+}
+
+.header ol li {
+    height: inherit;
     display: flex;
     align-items: center;
+}
+
+.header a {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    padding: 0 10px;
+}
+.felxbox {/*elemento padre*/
+    display: flex;
+    /*flex-direction: column; /*flex en columna*/
+    /*flex-direction: row;  /*Flex en fila*/
+    /*cuando necesito que mis elementos ya no quepan dentro de mi horizonte dentro de mi eje x
+    pase a abajo se utiliza el felx nowrap, esto tambien nos sirve para lo de responsive*/
+
+    /*flex-wrap: nowrap; /*esto qquiere decir que ningun elemento caiga a la parte inferior*/
+    flex-wrap: wrap;/*esto sirve para cuando no tenemos un elemento designado a mi ancho estos elementos van a ir callendo de manera secuencial*/
+
+    /*para hacer que los elementos de distribuyan de manera horizon se utiliza justify-content*/
+    /*puede recibir varios valores como: flex-start (Este lo alinea en el inicio y a la derecha
+    flex-end (este lo ubica hacia la derecha, y center (pues centra nuestro elemento)
+    Los espaciados entre los elementos se llaman: 
+    space-between(me da un espaciado de elementos pero no me da espacios en el primero y en el ultumo),
+    espace-around(Va a gener un espaciado igual hacia la izquierda y derehca de los elementos hijos de las cajas de flexbox),
+    espace-evenly(Me va a dar un mismo espaciado identico en cada uno de los huecos)*/
+    justify-content: center; 
+    height: 300px;
+    align-items: center;
+    /*flex-direction: column;*/
+    border: 1px solid blue;
+}
+
+.box {/*elemento hijo*/
+    width:200px;
+    height: 200px;
+    margin: 10px;/*colocarles un espaciado entre mis cajas*/
+    border: 1px solid red;
+
+    /*propiedad para hijos con display flex se llama felx-shrink*/
+    /*esto sirve para que no se altare el ancho y el alto, basicamente se nos dice la capacidad de encogimiento que podemos tener*/
+    flex-shrink: 0;
+    /*cuando necesito que mis elementos ya no quepan dentro de mi horizonte dentro de mi eje x
+    pase a abajo se utiliza el felx nowrap*/
+}
+
+/*Esta clase de contenedor sirve para todas las secciones*/
+/*Asi que todos los elementos que necesitemos heredar de cada sección se enlistan aqui*/
+.container { 
+/*utilizar bordes nos ayuda a darnos una idea de como ordenar nuestros elementos una ve que lo conseguimos podemos quitarlos*/
+   /* border: 1px solid red;*/ 
+    width: 1200px;
+    margin: 0 auto;
+    /*se heredan todos los elementos del padre para respetar todo y es de la siguiente manera*/
+    /*Si estos elementos no se declaran en el padre no podemos utilizar estos elementos*/
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+}
+
+.hero {
+    height: 300px; /*ponerle alto ficjo a un elemento*/  
+    /*background-image: url('../images/hero.jpg');*/  /*colocar estilios descentes ose nuestra imagen de fondo*/
+    background-color: #1b2127; /*poner color de fondo utiliamos colores estandar*/
+    /*background-size: 500px 300px;*/  /*para darle altura a la imagen dentro de esa sección siempre se empieza por el ancho y luego por el alto*/
+    /*background-repeat: no-repeat;*/  /*para que no se repita mi igaen en la sección*/
+    /*background-position-x: right;*/ /*para hubicar la imagen donde queremos en el eje orizontal*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-image {
+  object-fit: cover; /*ESto nos ayuda a respetar las propiedades de nuestra imagen*/
 }
 
 .portfolio {
@@ -142,88 +247,6 @@ h2 {
     height: 400px;
 }
 
-.header{
-    background-color: #1b2127; /*color gris obscuro*/
-    color: white;/*para dar formato a los enlaces con el color de fondo para ponerle color a los textos.*/
-    display: flex;
-    height: 70px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-ol,
-ul{
-    margin:0;
-    padding: 0;
-    list-style: none;
-}
-
-figure{
-    margin: 0;
-}
-.header a{  /*paqra colocar color a los elementos dentro de la cabecera*/
-    color: white;
-    text-decoration: none; /*que no tenga ningun tipo de decoración o subrayado el texto el menu*/
-}
-
-.menu{
-    height: inherit;
-}
-
-.header ol{
-    display: flex;
-    height: inherit;
-    align-items: center;
-}
-
-.header ol li {
-    height: inherit;
-    display: flex;
-    align-items: center;
-}
-
-.header a {
-    display: flex;
-    align-items: center;
-    height: inherit;
-    padding: 0 10px;
-}
-.felxbox{/*elemento padre*/
-    display: flex;
-    /*flex-direction: column; /*flex en columna*/
-    /*flex-direction: row;  /*Flex en fila*/
-    /*cuando necesito que mis elementos ya no quepan dentro de mi horizonte dentro de mi eje x
-    pase a abajo se utiliza el felx nowrap, esto tambien nos sirve para lo de responsive*/
-
-    /*flex-wrap: nowrap; /*esto qquiere decir que ningun elemento caiga a la parte inferior*/
-    flex-wrap: wrap;/*esto sirve para cuando no tenemos un elemento designado a mi ancho estos elementos van a ir callendo de manera secuencial*/
-
-    /*para hacer que los elementos de distribuyan de manera horizon se utiliza justify-content*/
-    /*puede recibir varios valores como: flex-start (Este lo alinea en el inicio y a la derecha
-    flex-end (este lo ubica hacia la derecha, y center (pues centra nuestro elemento)
-    Los espaciados entre los elementos se llaman: 
-    space-between(me da un espaciado de elementos pero no me da espacios en el primero y en el ultumo),
-    espace-around(Va a gener un espaciado igual hacia la izquierda y derehca de los elementos hijos de las cajas de flexbox),
-    espace-evenly(Me va a dar un mismo espaciado identico en cada uno de los huecos)*/
-    justify-content: center; 
-    height: 300px;
-    align-items: center;
-    /*flex-direction: column;*/
-    border: 1px solid blue;
-}
-
-.box{/*elemento hijo*/
-    width:200px;
-    height: 200px;
-    margin: 10px;/*colocarles un espaciado entre mis cajas*/
-    border: 1px solid red;
-
-    /*propiedad para hijos con display flex se llama felx-shrink*/
-    /*esto sirve para que no se altare el ancho y el alto, basicamente se nos dice la capacidad de encogimiento que podemos tener*/
-    flex-shrink: 0;
-    /*cuando necesito que mis elementos ya no quepan dentro de mi horizonte dentro de mi eje x
-    pase a abajo se utiliza el felx nowrap*/
-}
 
 .experience-title{
     margin-left: 0px;
@@ -231,6 +254,8 @@ figure{
 
 .experience {/*evento padere o de la seccion events*/
     display: flex;
+    flex-wrap: wrap; /*Se le tiene que heredar las propiedades al container*/
+    justify-content: space-between;
 }
 
 .event {
@@ -245,18 +270,19 @@ figure{
 }
 
 .event img {
-  width: 480px;
+  width: 500px;
   height: 200px;
   object-fit: cover;/*para adecuar el tamaño de la imagen dentro del contenedor*/
 }
 
 .event-details {
-    margin: 20px 40px;
-    margin-top: -40px;
+    margin: 30px 50px;
+    margin-top: -50px;
     background-color: white;
     position: relative;/*posicion relativa nos sirve para super poner elementos encima de otros*/
-    padding: 20px;
+    padding: 30px;
     text-align: center;
+    
 }
 
 .event-description{
@@ -266,9 +292,9 @@ figure{
 .event-url{
     color: #056fff;
     border: 1px solid;
-    padding: 5px 20px;
+    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
 
 }
 
